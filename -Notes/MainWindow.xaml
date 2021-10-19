@@ -1,0 +1,33 @@
+﻿<Window x:Class="Notes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Notes"
+        mc:Ignorable="d"
+        Title="{DynamicResource main_Title}" Height="750" Width="420" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="/ruled_sheet.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Button Name ="CreateButton" Content="{DynamicResource main_Add}" HorizontalAlignment="Center" Margin="0,90,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial Black" Height="63" FontWeight="Bold" Cursor="Hand" BorderBrush="Black" UseLayoutRounding="False" Click="CreateButton_Click" IsCancel="True" Width="205" Foreground="White">
+            <Button.Background>
+                <ImageBrush ImageSource="/stol.jpg" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <ListBox Name ="NotesList"  Margin="18,237,18,37" MouseDoubleClick="NotesList_ItemDoubleClick" Background="{x:Null}" SelectionChanged="NotesList_SelectionChanged" FontFamily="Arial" Foreground="White">
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="{DynamicResource main_Del}" Click="DelButton_Click"></MenuItem>
+                </ContextMenu>
+            </ListBox.ContextMenu>
+        </ListBox>
+        <TextBlock Margin="108,25
+                   ,108,0" Text="{DynamicResource main_Title}" TextWrapping="Wrap" FontFamily="Arial Black" FontSize="36" TextAlignment="Center" Height="44" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock Margin="19,190,18,0" Text="{DynamicResource main_List}" TextWrapping="Wrap" VerticalAlignment="Top" Height="47" FontFamily="Arial Black" FontSize="24" TextAlignment="Center" FontWeight="Bold" Foreground="White"/>
+        <ComboBox Margin="0,0,18,10" SelectionChanged="Lang_SelectionChanged" HorizontalAlignment="Right" Width="120" Height="22" VerticalAlignment="Bottom">
+            <ComboBoxItem Name="nRu" Content="{DynamicResource r_Russian}" Tag="rus-RU"/>
+            <ComboBoxItem Name="nEn" Content="{DynamicResource r_English}" Tag="en-US"/>
+        </ComboBox>
+    </Grid>
+</Window>
