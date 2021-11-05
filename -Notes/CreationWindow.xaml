@@ -30,14 +30,14 @@
             </Button.Background>
         </Button>
 
-        <RichTextBox Name="NoteEditor" Margin="16,75,16,16" Background="{x:Null}" FontFamily="Arial" FontSize="16" Foreground="White">
+        <RichTextBox Name="NoteEditor" Margin="16,75,16,16" Background="{x:Null}" FontFamily="Arial Black" FontSize="16" Foreground="Black">
             <FlowDocument>
                 <Paragraph>
                     <Run Text=""/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <TextBox Name="Note_Title" Margin="16,40,16,0" Text="" TextWrapping="Wrap" Background="{x:Null}" FontFamily="Arial" FontSize="16" Height="30" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox Name="Note_Title" Margin="16,40,16,0" Text="" TextWrapping="Wrap" Background="{x:Null}" FontFamily="Arial Black" FontSize="16" Height="30" VerticalAlignment="Top" Foreground="Black"/>
 
     </Grid>
 </Window>
