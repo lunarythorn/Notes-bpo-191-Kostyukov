@@ -113,5 +113,33 @@ namespace Notes
         {
             EditingCommands.ToggleItalic.Execute(null, NoteEditor);
         }
+
+        private void Note_Tag_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Note_Title_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (Note_Title.Text == "Введите заголовок")
+            {
+                Note_Title.Text = "";
+                Note_Title.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromArgb(0xFF, 0xFF, 0xFF, 0xFF));
+            }
+        }
+
+        private void Note_Title_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (Note_Title.Text == "")
+            {
+                Note_Title.Text = "Введите заголовок";
+                Note_Title.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromArgb(0xFF, 0x8A, 0x8A, 0x8A));
+            }
+        }
+
+        private void Note_Title_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

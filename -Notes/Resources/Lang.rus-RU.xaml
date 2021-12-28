@@ -10,5 +10,7 @@
     <v:String x:Key="main_Add">Добавить</v:String>
     <v:String x:Key="main_List">Все заметки</v:String>
     <v:String x:Key="main_Del">Удалить</v:String>
+    <v:String x:Key="main_Tag">Теги</v:String>
+    
     
 </ResourceDictionary>

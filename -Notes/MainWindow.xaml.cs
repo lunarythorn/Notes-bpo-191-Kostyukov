@@ -93,5 +93,11 @@ namespace Notes
         {
 
         }
+
+        private void TagButton_Click(object sender, RoutedEventArgs e)
+        {
+            Window_Tag win3 = new Window_Tag();
+            win3.Show();
+        }
     }
 }

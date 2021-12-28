@@ -11,6 +11,9 @@
     </Window.Background>
     <Grid>
         <Button Name ="CreateButton" Content="{DynamicResource main_Add}" HorizontalAlignment="Center" Margin="0,90,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial Black" Height="63" FontWeight="Bold" Cursor="Hand" UseLayoutRounding="False" Click="CreateButton_Click" IsCancel="True" Width="205" Foreground="White">
+            <Button.Effect>
+                <DropShadowEffect Opacity="0.5"/>
+            </Button.Effect>
             <Button.BorderBrush>
                 <SolidColorBrush Color="#FF707070" Opacity="0"/>
             </Button.BorderBrush>
@@ -18,7 +21,7 @@
                 <ImageBrush ImageSource="/stol.jpg" Stretch="UniformToFill"/>
             </Button.Background>
         </Button>
-        <ListBox Name ="NotesList"  Margin="18,237,18,37" MouseDoubleClick="NotesList_ItemDoubleClick" Background="{x:Null}" SelectionChanged="NotesList_SelectionChanged" FontFamily="Arial Black" Foreground="#FF535353" BorderBrush="#FF3C3C3C" FontSize="16">
+        <ListBox Name ="NotesList"  Margin="18,237,18,37" MouseDoubleClick="NotesList_ItemDoubleClick" Background="{x:Null}" SelectionChanged="NotesList_SelectionChanged" FontFamily="Arial Black" Foreground="#FF111111" BorderBrush="#FF3C3C3C" FontSize="16">
             <ListBox.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="{DynamicResource main_Del}" Click="DelButton_Click"></MenuItem>
@@ -26,11 +29,23 @@
             </ListBox.ContextMenu>
         </ListBox>
         <TextBlock Margin="108,25
-                   ,108,0" Text="{DynamicResource main_Title}" TextWrapping="Wrap" FontFamily="Arial Black" FontSize="36" TextAlignment="Center" Height="44" VerticalAlignment="Top" Foreground="#FF535353"/>
-        <TextBlock Margin="19,190,18,0" Text="{DynamicResource main_List}" TextWrapping="Wrap" VerticalAlignment="Top" Height="47" FontFamily="Arial Black" FontSize="24" TextAlignment="Center" FontWeight="Bold" Foreground="#FF535353"/>
+                   ,108,0" Text="{DynamicResource main_Title}" TextWrapping="Wrap" FontFamily="Arial Black" FontSize="36" TextAlignment="Center" Height="44" VerticalAlignment="Top" Foreground="#FF111111"/>
+        <TextBlock Margin="19,190,18,0" Text="{DynamicResource main_List}" TextWrapping="Wrap" VerticalAlignment="Top" Height="47" FontFamily="Arial Black" FontSize="24" TextAlignment="Center" FontWeight="Bold" Foreground="#FF111111"/>
         <ComboBox Margin="0,0,18,10" SelectionChanged="Lang_SelectionChanged" HorizontalAlignment="Right" Width="120" Height="22" VerticalAlignment="Bottom">
             <ComboBoxItem Name="nRu" Content="{DynamicResource r_Russian}" Tag="rus-RU"/>
             <ComboBoxItem Name="nEn" Content="{DynamicResource r_English}" Tag="en-US"/>
         </ComboBox>
+        <Button x:Name ="TagButton" Content="{DynamicResource main_Tag}" HorizontalAlignment="Left" Margin="330,90,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial Black" Height="63" FontWeight="Bold" Cursor="Hand" UseLayoutRounding="False" Click="TagButton_Click" IsCancel="True" Width="64" Foreground="White">
+            <Button.Effect>
+                <DropShadowEffect Opacity="0.5"/>
+            </Button.Effect>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush ImageSource="/stol.jpg" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+
     </Grid>
 </Window>

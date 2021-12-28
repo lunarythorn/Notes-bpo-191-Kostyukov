@@ -15,7 +15,7 @@ namespace NotesClass
             {
                 FileStream fs = new FileStream(titles[i], FileMode.Open);
                 notes.Add(titles[i], fs);
-            }            
+            }
         }
 
         public Dictionary <string, FileStream> get_notes()
@@ -42,7 +42,7 @@ namespace NotesClass
                 File.Delete(full_name);
                 notes.Remove(full_name);
             }
-            else throw  (new FileNotFoundException());
+            else throw new FileNotFoundException();
         }
 
         public void add_file(string title, TextRange doc)

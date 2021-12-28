@@ -12,32 +12,41 @@
         <ImageBrush ImageSource="/ruled_sheet.jpg"/>
     </Window.Background>
     <Grid>
-        <Button Name="Bold_Button" Content="B" Click="Bold_Button_Click" HorizontalAlignment="Left" Margin="16,10,0,0" Width="24" FontFamily="Segoe Print" FontWeight="Bold" Cursor="Hand" Height="25" VerticalAlignment="Top" Foreground="White">
+        <Button Name="Bold_Button" Content="B" Click="Bold_Button_Click" HorizontalAlignment="Left" Margin="16,10,0,0" Width="24" FontFamily="Arial Black" FontWeight="Bold" Cursor="Hand" Height="25" VerticalAlignment="Top" Foreground="White" BorderBrush="{x:Null}">
+            <Button.Effect>
+                <DropShadowEffect Opacity="0.4"/>
+            </Button.Effect>
             <Button.Background>
                 <ImageBrush ImageSource="/stol.jpg"/>
             </Button.Background>
         </Button>
 
-        <Button Name="Underlined" Content="U" Click="Underlined_Click" HorizontalAlignment="Left" Margin="75,10,0,0" VerticalAlignment="Top" Height="25" Width="25" FontFamily="Segoe Print" Cursor="Hand" Foreground="White">
+        <Button Name="Underlined" Content="U" Click="Underlined_Click" HorizontalAlignment="Left" Margin="75,10,0,0" VerticalAlignment="Top" Height="25" Width="25" FontFamily="Arial Black" Cursor="Hand" Foreground="White" BorderBrush="{x:Null}">
+            <Button.Effect>
+                <DropShadowEffect Opacity="0.4"/>
+            </Button.Effect>
             <Button.Background>
                 <ImageBrush ImageSource="/stol.jpg"/>
             </Button.Background>
         </Button>
 
-        <Button Name="Italic" Content="I" Click="Italic_Click" HorizontalAlignment="Left" Margin="45,10,0,0" VerticalAlignment="Top" Height="25" Width="25" FontFamily="Segoe Print" FontStyle="Italic" Cursor="Hand" FontSize="11" Foreground="White">
+        <Button Name="Italic" Content="I" Click="Italic_Click" HorizontalAlignment="Left" Margin="45,10,0,0" VerticalAlignment="Top" Height="25" Width="25" FontFamily="Arial" FontStyle="Italic" Cursor="Hand" FontSize="11" Foreground="White" BorderBrush="{x:Null}">
+            <Button.Effect>
+                <DropShadowEffect Opacity="0.4"/>
+            </Button.Effect>
             <Button.Background>
                 <ImageBrush ImageSource="/stol.jpg"/>
             </Button.Background>
         </Button>
 
-        <RichTextBox Name="NoteEditor" Margin="16,75,16,16" Background="{x:Null}" FontFamily="Arial Black" FontSize="16" Foreground="Black">
+        <RichTextBox Name="NoteEditor" Margin="16,82,16,53" Background="{x:Null}" FontFamily="Arial" FontSize="16" Foreground="Black">
             <FlowDocument>
                 <Paragraph>
                     <Run Text=""/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <TextBox Name="Note_Title" Margin="16,40,16,0" Text="" TextWrapping="Wrap" Background="{x:Null}" FontFamily="Arial Black" FontSize="16" Height="30" VerticalAlignment="Top" Foreground="Black"/>
-
+        <TextBox Name="Note_Title" Margin="16,40,16,0" Text="" TextWrapping="Wrap" Background="{x:Null}" FontFamily="Arial Black" FontSize="16" Height="30" VerticalAlignment="Top" Foreground="Black" TextChanged="Note_Title_TextChanged"/>
+        <TextBox x:Name="Note_Tag" Margin="16,592,16,0" Text="" TextWrapping="Wrap" Background="{x:Null}" FontFamily="Arial" FontSize="16" Height="30" VerticalAlignment="Top" Foreground="Gray" TextChanged="Note_Tag_TextChanged"/>
     </Grid>
 </Window>
